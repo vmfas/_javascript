@@ -20,17 +20,16 @@ function calcularImc (peso, altura) {
     const imc2 = peso / (Math.pow(altura, 2));
     
     if (imc2 < 18.5) {
-        console.log(`Seu Imc é: ${imc2.toFixed(2)}, e indica que você está abaixo do peso`);
+        return `Seu Imc é: ${imc2.toFixed(2)}, e indica que você está abaixo do peso`;
     } else if (imc2 >= 18.5 && imc2 < 25) {
-        console.log(`Seu Imc é: ${imc2.toFixed(2)}, e indica que você está no peso ideal`);
+        return `Seu Imc é: ${imc2.toFixed(2)}, e indica que você está no peso ideal`;
     } else if (imc2 >=25 && imc2 < 30) {
-        console.log(`Seu Imc é: ${imc2.toFixed(2)}, e indica que você está acima do peso`);
+        return `Seu Imc é: ${imc2.toFixed(2)}, e indica que você está acima do peso`;
     } else if (imc2 >=30 && imc2 < 40) {
-        console.log(`Seu Imc é: ${imc2.toFixed(2)}, e indica que você está obeso`);
+        return `Seu Imc é: ${imc2.toFixed(2)}, e indica que você está obeso`;
     } else if (imc2 > 40) {
-        console.log(`Seu Imc é: ${imc2.toFixed(2)}, e indica que você está com uma obesidade grave`);
+        return `Seu Imc é: ${imc2.toFixed(2)}, e indica que você está com uma obesidade grave`;
     }
 }
 
-calcularImc(40, 1.50)
-calcularImc(68, 1.65)
+console.log(calcularImc(70, 1.76))
