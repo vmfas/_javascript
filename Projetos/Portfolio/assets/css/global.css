@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+
 }
 
 @font-face {
@@ -9,8 +10,8 @@
 }
 
 body {
-background-color: black;
-color: white;
+    color: #fff;
+    background-color: black;
 }
 
 .main {
@@ -18,4 +19,14 @@ color: white;
     padding: 1rem;
     border: 1px solid white;
     border-radius: 1rem;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(333deg, rgba(255, 0, 0, 1) 0%, rgba(216, 0, 255, 1) 33%, rgba(36, 0, 255, 1) 66%, rgba(0, 255, 246, 1) 99%);
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
 }

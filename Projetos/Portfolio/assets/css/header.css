@@ -23,5 +23,78 @@
 }
 
 .infos p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: .5rem;
+    font-size: 1.125rem;
 }
+
+.infos .person::before {
+    background-image: url('../img/icons/person.svg');
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.infos .phone::before {
+    background-image: url('../img/icons/phone.svg');
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.infos .map::before {
+    background-image: url('../img/icons/map.svg');
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.infos .mail::before {
+    background-image: url('../img/icons/mail.svg');
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas: 
+        "photo title"
+        "photo infos"
+        ;
+        
+    }
+
+    .header .photo{
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    
+    .header .title{
+        grid-area: title;
+        text-align: start;
+    }
+
+    .header .infos{
+        grid-area: infos;
+    }
+  }
