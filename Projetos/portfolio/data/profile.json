@@ -36,17 +36,17 @@
   "portfolio": [
     {
       "name": "Projeto Pokedex 1",
-      "url": "https://github.com/vmfas/javascript/tree/main/Projetos/Pokedex_1",
+      "url": "https://vmfas.github.io/javascript/Projetos/Pokedex_1/index.html",
       "github": true
     },
     {
       "name": "Projeto Pokedex 2",
-      "url": "https://github.com/vmfas/javascript/tree/main/Projetos/pokedex_2",
+      "url": "https://vmfas.github.io/javascript/Projetos/pokedex_2/html/index.html",
       "github": true
     },
     {
       "name": "Projeto Portifolio",
-      "url": "https://github.com/vmfas/javascript/tree/main/Projetos/portfolio",
+      "url": "https://vmfas.github.io/javascript/Projetos/portfolio/index.html",
       "github": true
     }
   ],
