@@ -2,6 +2,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/header.svg');
 }
 
 .header .photo {
@@ -11,18 +25,18 @@
 }
 
 .header .title {
-    text-align: center;
     font-family: 'Neue Machina';
+    text-align: center;
 }
 
-.infos {
+.information {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
 }
 
-.infos p {
+.information p {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,8 +44,7 @@
     font-size: 1.125rem;
 }
 
-.infos .person::before {
-    background-image: url('../img/icons/person.svg');
+.information p::before {
     content: '';
     display: inline-block;
     width: 1rem;
@@ -41,60 +54,43 @@
     margin-right: .5rem;
 }
 
-.infos .phone::before {
+.information .job::before {
+    background-image: url('../img/icons/job.svg');
+}
+
+.information .location::before {
+    background-image: url('../img/icons/location.svg');
+}
+
+.information .email::before {
+    background-image: url('../img/icons/email.svg');
+}
+
+.information .phone::before {
     background-image: url('../img/icons/phone.svg');
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: .5rem;
 }
 
-.infos .map::before {
-    background-image: url('../img/icons/map.svg');
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: .5rem;
-}
-
-.infos .mail::before {
-    background-image: url('../img/icons/mail.svg');
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: .5rem;
-}
-
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .header {
         display: grid;
-        grid-template-areas: 
-        "photo title"
-        "photo infos"
+        grid-template-areas:
+            "photo title"
+            "photo information"
         ;
-        
     }
 
-    .header .photo{
+    .header .photo {
         grid-area: photo;
         margin: 0 auto;
     }
-    
-    .header .title{
+
+    .header .title {
         grid-area: title;
         text-align: start;
+        max-width: 210px;
     }
 
-    .header .infos{
-        grid-area: infos;
+    .header .information {
+        grid-area: information;
     }
-  }
+}
